@@ -32,7 +32,7 @@ import com.example.demo.response.updateResponse;
 @RestController
 public class Controller {
 	Logger log = LoggerFactory.getLogger(Controller.class);
-	List<UserReq> list = new ArrayList<>();
+	List<UserReq> users = new ArrayList<>();
 	
 //	@Value("${notification.channel}")
 //	private String nof;
@@ -45,22 +45,20 @@ public class Controller {
 	
 	@GetMapping("/get")
 	public ResponseEntity<List<UserReq>> getAllUser() {
-		
-		System.out.println(d.demoData());
-		d.demoData();
-		if (list.size() == 0) {
+		d.addData();
+		if (users.size() == 0) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}	
-		
-		return new ResponseEntity<>(list, HttpStatus.OK);
+		log.info("add Data Success !");
+		return new ResponseEntity<>(users, HttpStatus.OK);
 
 	}
 	@GetMapping("/gets")
 	public List<UserReq> getAll(){
 		//d.demoData();
-		if(list.size() == 0) return null;
+		if(users.size() == 0) return null;
 		//if(s == null) return null;
-		return list;
+		return users;
 		
 	}
 	@GetMapping("/send")
@@ -78,14 +76,14 @@ public class Controller {
 	}
 
 	@PostMapping("/post")
-	public ResponseEntity<addResponse> addManager(@RequestBody UserReq m) {
+	public ResponseEntity<addResponse> UserAdd(@RequestBody UserReq m) {
 		if ( m == null || m.getUserId() <= 0 || m.getCurrent_balance() <= 0) {
 			addResponse addF = new addResponse("1", "Add failed", "1", LocalDateTime.now().toString(),String.valueOf(m.getUserId()));
 			log.error(String.valueOf(addF));
 			return new ResponseEntity<>(addF, HttpStatus.INTERNAL_SERVER_ERROR);
 		} else {
 			addResponse addT = new addResponse("0", "Added !", "0", LocalDateTime.now().toString(),String.valueOf(m.getUserId()));
-			list.add(m);
+			users.add(m);
 			log.info(String.valueOf(addT));
 			
 			return new ResponseEntity<>(addT, HttpStatus.CREATED);		
@@ -93,15 +91,15 @@ public class Controller {
 	}
 
 	@PutMapping("/put")
-	public ResponseEntity<updateResponse> updateManager(@RequestBody UserReq m) {
-		if (m == null || list.size() == 0) {
+	public ResponseEntity<updateResponse> updateUser(@RequestBody UserReq m) {
+		if (m == null || users.size() == 0) {
 			updateResponse updF = new updateResponse("2", "Update failed", "2", LocalDateTime.now().toString(),
 					String.valueOf(m.getUserId()));
 			log.error(String.valueOf(updF));
 			return new ResponseEntity<>(updF, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		updateResponse updT = new updateResponse();
-		list.forEach(t -> {
+		users.forEach(t -> {
 			if (t.getUserId() != m.getUserId())
 				return;
 			t.setTitle(m.getTitle());
@@ -120,9 +118,9 @@ public class Controller {
 	}
 
 	@DeleteMapping("/delete")
-	public ResponseEntity<deleteResponse> deleteManager(@RequestParam(name = "id") int id) {
+	public ResponseEntity<deleteResponse> deleteUser(@RequestParam(name = "id") int id) {
 		deleteResponse delF = new deleteResponse();
-		if (id <= 0 || list.size() == 0) {
+		if (id <= 0 || users.size() == 0) {
 			delF.setResponseId("3");
 			delF.setResponseMessage("Delete failed !");
 			delF.setResponseCode("3");
@@ -132,9 +130,9 @@ public class Controller {
 			return new ResponseEntity<>(delF, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		deleteResponse delT = new deleteResponse();	
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getUserId() == id) {
-				list.remove(i);
+		for (int i = 0; i < users.size(); i++) {
+			if (users.get(i).getUserId() == id) {
+				users.remove(i);
 				delT.setResponseId("0");
 				delT.setResponseMessage("Deleted !");
 				delT.setResponseCode("0");

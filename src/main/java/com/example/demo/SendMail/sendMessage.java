@@ -28,7 +28,6 @@ import com.example.demo.model.UserReq;
 @Component
 public class sendMessage {
 	private static Logger log = LoggerFactory.getLogger(sendMessage.class);
-	
 	@Autowired
 	Dao res = new DaoImp();
 	
@@ -65,18 +64,14 @@ public class sendMessage {
 		Session ss = Session.getInstance(pro,au);
 		
 		MimeMessage msg = new MimeMessage(ss);
-		
 		msg.addHeader("Content-type", "text/HTML; charest=UTF-8");
 		msg.addHeader("format","flowed");
 		msg.addHeader("Content-Transfer-Encoding", "8bit");
-		
 		msg.setFrom(new InternetAddress(fromEmail, "Thong bao bien dong so du"));
 		msg.setReplyTo(InternetAddress.parse(fromEmail, false));
 		msg.setSubject(userSend,"UTF-8");
-		
 		msg.setText(String.valueOf(mng), "UTF-8");
 		msg.setSentDate(new Date());
-		
 		msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail, false));
 		Transport.send(msg,fromEmail,password);
 		System.out.println("Send Email thanh cong");

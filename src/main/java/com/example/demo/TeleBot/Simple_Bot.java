@@ -13,7 +13,7 @@ public class Simple_Bot extends TelegramLongPollingBot {
 		if (update.hasMessage() && update.getMessage().hasText()) {
 			SendMessage message = new SendMessage(); // Create a SendMessage object with mandatory fields
 			message.setChatId(update.getMessage().getChatId().toString());
-			message.setText("nghe hay đấy");
+			message.setText("");
 
 			try {
 				execute(message); // Call method to send the message
@@ -24,14 +24,11 @@ public class Simple_Bot extends TelegramLongPollingBot {
 		}
 
 	}
-
-
 	@Override
 	public String getBotUsername() {
 		// TODO
 		return "ThangNgaoBot";
 	}
-
 	@Override
 	public String getBotToken() {
 		// TODO

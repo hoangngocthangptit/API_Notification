@@ -6,5 +6,5 @@ import com.example.demo.model.UserReq;
 
 public interface Dao {
 	public List<UserReq> getAll();
-	public List<UserReq> demoData();
+	public List<UserReq> addData();
 }

@@ -8,20 +8,19 @@ import com.example.demo.model.UserReq;
 
 @Service
 public class DaoImp implements Dao {
-	public List<UserReq> list = new ArrayList<>();
+	public List<UserReq> users = new ArrayList<>();
 	@Override
 	public List<UserReq> getAll() {
-		demoData();
-		if (list == null)
+		addData();
+		if (users == null)
 			return null;
-		return list;
+		return users;
 	}
 	@Override
-	public List<UserReq> demoData() {
-		list.add(new UserReq(1, "Hello", "tien nhieu de làm gì", 100000L, "BC", "Thanh DN"));
-		list.add(new UserReq(2, "Hello", "nho tra đung hạn", 100000L, "BC", "idol duc"));
-		list.add(new UserReq(3, "Hello", "cho em xin tien", 10000L, "DN", "Duck"));
-		return list;
+	public List<UserReq> addData() {
+		users.add(new UserReq(1, "Hello", "tien nhieu de làm gì", 100000L, "BC", "Thanh DN"));
+		users.add(new UserReq(3, "Hello", "cho em xin tien", 10000L, "DN", "Duck"));
+		return users;
 	}
 
 }

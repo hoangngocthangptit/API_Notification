@@ -28,7 +28,7 @@ public class deleteResponse extends ResponseJS {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
+		final int prime = 25;
 		int result = super.hashCode();
 		result = prime * result + Objects.hash(deleteId);
 		return result;

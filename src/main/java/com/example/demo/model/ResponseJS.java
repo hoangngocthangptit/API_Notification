@@ -22,6 +22,7 @@ public class ResponseJS {
 
 	public String getResponseCode() {
 		return responseCode;
+		
 	}
 
 	public void setResponseCode(String responseCode) {
