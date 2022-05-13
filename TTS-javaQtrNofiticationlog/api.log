@@ -1,0 +1,55 @@
+"2022-05-12 15:39:47 [restartedMain] INFO  c.example.demo.ResfulApiApplication - Starting ResfulApiApplication using Java 17.0.2 on HSB-LVT-21 with PID 11040 (C:\TTS-java\Qtr\Nofitication\target\classes started by PC in C:\TTS-java\Qtr\Nofitication)
+""2022-05-12 15:39:47 [restartedMain] INFO  c.example.demo.ResfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+""2022-05-12 15:39:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2022-05-12 15:39:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2022-05-12 15:39:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""2022-05-12 15:39:47 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2022-05-12 15:39:47 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+""2022-05-12 15:39:47 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2022-05-12 15:39:47 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+""2022-05-12 15:39:48 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+""2022-05-12 15:39:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""2022-05-12 15:39:48 [restartedMain] INFO  c.example.demo.ResfulApiApplication - Started ResfulApiApplication in 1.019 seconds (JVM running for 1.49)
+""2022-05-12 15:39:50 [restartedMain] INFO  c.example.demo.ResfulApiApplication - Starting ResfulApiApplication using Java 17.0.2 on HSB-LVT-21 with PID 18496 (C:\TTS-java\Qtr\Nofitication\target\classes started by PC in C:\TTS-java\Qtr\Nofitication)
+""2022-05-12 15:39:50 [restartedMain] INFO  c.example.demo.ResfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+""2022-05-12 15:39:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""2022-05-12 15:39:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2022-05-12 15:39:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+""2022-05-12 15:39:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2022-05-12 15:39:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 124 ms
+""2022-05-12 15:39:50 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""2022-05-12 15:39:50 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+""2022-05-12 15:39:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+""2022-05-12 15:39:50 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2022-05-12 15:39:50 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+""2022-05-12 15:41:06 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+""2022-05-12 15:41:50 [restartedMain] INFO  c.example.demo.ResfulApiApplication - Starting ResfulApiApplication using Java 17.0.2 on HSB-LVT-21 with PID 8180 (C:\TTS-java\Qtr\Nofitication\target\classes started by PC in C:\TTS-java\Qtr\Nofitication)
+""2022-05-12 15:41:50 [restartedMain] INFO  c.example.demo.ResfulApiApplication - No active profile set, falling back to 1 default profile: "default"
+""2022-05-12 15:41:50 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2022-05-12 15:41:50 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2022-05-12 15:41:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""2022-05-12 15:41:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2022-05-12 15:41:51 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+""2022-05-12 15:41:51 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2022-05-12 15:41:51 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 525 ms
+""2022-05-12 15:41:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""2022-05-12 15:41:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""2022-05-12 15:41:51 [restartedMain] INFO  c.example.demo.ResfulApiApplication - Started ResfulApiApplication in 0.997 seconds (JVM running for 1.44)
+""2022-05-12 15:42:22 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2022-05-12 15:42:22 [http-nio-8080-exec-1] INFO  c.example.demo.controller.Controller - addResponse [addId=1] Reponse [responseCode=0, responseMessage=Added !, responseId=0, responseTime=2022-05-12T15:42:22.419893300]
+"
